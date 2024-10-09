@@ -12,20 +12,20 @@ const App = () => {
       element: <Locations />
     },
     {
-      path: '/echolounge',
-      element: <LocationEvents index={1} />
+      path: '/MIT',
+      element: <LocationEvents location='MIT, Cambridge, MA' address = '77 Massachusetts Ave, Cambridge, MA 02139, USA'/>
     },
     {
-      path: '/houseofblues',
-      element: <LocationEvents index={2} />
+      path: '/CCNY',
+      element: <LocationEvents location='City College of New York, NY'address = '160 Convent Ave, New York, NY 10031, USA' />
     },
     {
-      path: '/pavilion',
-      element: <LocationEvents index={3} />
+      path: '/Online',
+      element: <LocationEvents location='Online'address = 'N/A' />
     },
     {
-      path: '/americanairlines',
-      element: <LocationEvents index={4} />
+      path: '/Stanford',
+      element: <LocationEvents location='Stanford University, CA'address = '450 Serra Mall, Stanford, CA 94305, USA'/>
     },
     {
       path: '/events',
@@ -37,7 +37,7 @@ const App = () => {
     <div className='app'>
 
       <header className='main-header'>
-        <h1>UnityGrid Plaza</h1>
+        <h1>HACKERS WORLD</h1>
 
         <div className='header-buttons'>
           <Link to='/' role='button'>Home</Link>

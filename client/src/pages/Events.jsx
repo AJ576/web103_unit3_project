@@ -3,17 +3,16 @@ import EventsAPI from '../services/EventsAPI'
 import Event from '../components/Event'
 import '../css/LocationEvents.css'
 
-const LocationEvents = (props) => {
+const Events = () => {
+    const [location, setLocation] = useState([])
     const [events, setEvents] = useState([])
 
 
     useEffect(() => {
         (async () => {
             try {
-                const eventsData = await EventsAPI.getEventsByLoc(props.location)
-                console.log('eventsData')
+                const eventsData = await EventsAPI.getAllEvents()
                 setEvents(eventsData)
-                
             }
             catch (error) {
                 throw error
@@ -24,13 +23,7 @@ const LocationEvents = (props) => {
 
     return (
         <div className='location-events'>
-            <header>
 
-                <div className='location-info'>
-                    <h2>{props.location}</h2>
-                    <p>{props.address}</p>
-                </div>
-            </header>
 
             <main>
                 {
@@ -50,4 +43,4 @@ const LocationEvents = (props) => {
     )
 }
 
-export default LocationEvents
+export default Events
